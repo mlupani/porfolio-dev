@@ -48,9 +48,7 @@ const { project } = Astro.props;
           <div class="details">
             <h2>
               {
-                Array.from(project.title).map((letter, i) => (
-                  <span class="p-profession">{letter}</span>
-                ))
+                project.title
               }
             </h2>
             <div class="portfolio-description">
@@ -94,7 +92,7 @@ const { project } = Astro.props;
                   }
                 </ul>
 
-                <h6>Tecnologias</h6>
+                <h2 class="title-list">Tecnologias</h2>
                 <div class="tecnologies">
                   {
                     project.technologies.map(({icon}) => {
@@ -153,7 +151,7 @@ const { project } = Astro.props;
     list-style: none;
     padding: 0;
     gap: 20px;
-    margin-top: 20px
+    margin-top: 10px
   }
 
   .buttons-container{

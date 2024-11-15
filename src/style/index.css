@@ -45,3 +45,26 @@ main {
   color: #01be96;
   animation: rubberband 400ms alternate ease-out;
 }
+
+.swiper-pagination-bullet {
+  background-color: lightgreen !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #01be96 !important;
+}
+
+.container-link-project {
+  position: relative;
+  padding: 20px 10px;
+}
+
+.container-link-project a {
+  position: relative;
+  text-decoration: none;
+  padding: 10px 10px;
+  background-color: #01be96;
+  border-radius: 5px;
+  color: #f6f6f9;
+  justify-content: space-between;
+}

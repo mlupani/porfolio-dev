@@ -42,15 +42,11 @@ export const prerender = true;
     const letters = document.querySelectorAll(".p-profession") as NodeListOf<HTMLElement>;
     letters.forEach((letter) => {
       letter.addEventListener("mouseenter", () => {
-        toogle(letter);
+        letter.classList.add("bouncing");
       });
-    });
-
-    function toogle(letter: HTMLElement) {
-      letter.classList.add("bouncing");
       letter.addEventListener("animationend", () => {
         letter.classList.remove("bouncing");
       });
-    }
+    });
   })
 </script>

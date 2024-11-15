@@ -1,5 +1,12 @@
+---
+const currentPath = Astro.url.pathname;
+
+---
+
 <header class="header">
-  <h1 id="inicio">Portafolio</h1>
+  <a href={currentPath.includes('project') ? '/#proyectos' : '/'} style="color: white;">
+    <h1 id="inicio">Portafolio</h1>
+  </a>
   <nav class="nav">
     <ul class="ul-nav">
       <a href="#inicio">
@@ -12,9 +19,6 @@
 
       <a href="#skills">
         <li class="li-nav">Habilidades</li>
-      </a>
-      <a href="#estudios">
-        <li class="li-nav">Estudios</li>
       </a>
       <a href="#sobremi">
         <li class="li-nav">Sobre mi</li>
@@ -36,12 +40,12 @@
   <div class="menu-drop"></div>
 
   <script>
-    const $menu = document.querySelector(".nav");
-    const $menuDrop = document.querySelector(".menu-drop");
-    const $btnmenu = document.querySelector(".btn-menu");
-    const $linea1 = document.querySelector("#linea1");
-    const $linea2 = document.querySelector("#linea2");
-    const $linea3 = document.querySelector("#linea3");
+    const $menu = document.querySelector(".nav") as HTMLDivElement;
+    const $menuDrop = document.querySelector(".menu-drop") as HTMLDivElement;
+    const $btnmenu = document.querySelector(".btn-menu") as HTMLDivElement;
+    const $linea1 = document.querySelector("#linea1") as HTMLDivElement;
+    const $linea2 = document.querySelector("#linea2") as HTMLDivElement;
+    const $linea3 = document.querySelector("#linea3") as HTMLDivElement;
     $btnmenu.addEventListener("click", () => {
       $linea1.classList.toggle("activelinea1__bars-menu");
       $linea2.classList.toggle("activelinea2__bars-menu");

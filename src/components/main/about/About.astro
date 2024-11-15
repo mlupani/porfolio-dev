@@ -2,18 +2,21 @@
   <div class="linear-grandient-1"></div>
   <div class="container-about">
     <div class="container-text-about">
-      <h2 class="title-about" id="sobremi">Sobre mi</h2>
+      <h2 class="title-about" id="sobremi">
+        {
+          Array.from("Sobre").map((letter, index) => (
+            <span class="p-profession">{letter}</span>
+          ))
+        }
+        {
+          Array.from("mi").map((letter, index) => (
+            <span class="p-profession">{letter}</span>
+          ))
+        }
+      </h2>
       <p>
-        Soy un profesional del desarrollo de software, especializado en el
-        desarrollo web front-end. Desde que comencé mis estudios en
-        programación, descubrí mi interés por crear interfaces web intuitivas y
-        atractivas. Cada día me dedico a aprender y practicar nuevas tecnologías
-        para seguir mejorando mis habilidades. Me considero una persona
-        responsable, dinámica y creativa, con una gran capacidad de adaptación y
-        un constante deseo de trabajar y aprender. Tengo iniciativa para
-        resolver problemas y disfruto enfrentando nuevos desafíos en el campo de
-        la tecnología. En el futuro, planeo expandir mis conocimientos y dominar
-        una variedad aún mayor de herramientas y técnicas en el desarrollo web.
+        Desarrollador con màs de 10 años de experiencia.
+        Me enfoco principalmente en el desarrollo de aplicaciones Web y móviles, de preferencia utilizo Javascript. Siempre estoy en busca de retos profesionales, me gusta adquirir experiencia en diversos proyectos y posibilidades de crecimiento. Me considero autodidacta y dia a dia dedico tiempo a aprender para ser un mejor profesional en el área.
       </p>
     </div>
     <div class="container-svg-about">
@@ -75,6 +78,7 @@
     width: 100%;
     font-weight: 800;
     scroll-margin-top: 80px;
+    margin-top: 20px;
   }
   .container-text-about p {
     font-size: 17px;

@@ -1,12 +1,18 @@
 ---
-import { skills } from "../../../const/const";
+import { skills } from "../../../constants/const";
 import { getIconComponent } from "../../../icons/IconAll.astro";
 ---
 
 <section class="section-skill">
   <div class="linear-grandient-1"></div>
   <div class="container-skill">
-    <h2 class="title-skills" id="skills">Habilidades</h2>
+    <h2 class="title-skills" id="skills">
+      {
+        Array.from("Habilidades").map((letter, index) => (
+          <span class="p-profession">{letter}</span>
+        ))
+      }
+    </h2>
     <ul class="ul-skill">
       {
         skills.map(({ icon, title }) => {

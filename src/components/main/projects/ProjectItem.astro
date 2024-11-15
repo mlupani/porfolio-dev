@@ -1,5 +1,5 @@
 ---
-import { getIconComponent } from "../../../icons/IconAll.astro";
+import { getIconComponent } from "@/icons/IconAll.astro";
 
 type Technology = {
   icon?: string;
@@ -7,17 +7,19 @@ type Technology = {
 
 export interface Props {
   title: string;
-  img: string;
+  imgs: string[];
   description: string;
   technologies?: Technology[];
   link: string;
+  id: number;
 }
 
-const { technologies, title, img, description, link } = Astro.props;
+const { technologies, title, imgs, description, link, id } = Astro.props;
+
 ---
 
 <li class="li-project">
-  <img src={img} alt={title} loading="lazy" />
+  <img transition:name={`project-${title}`} src={`/img/${imgs[0]}`} alt={title} loading="lazy"  />
   <p class="title-project">{title}</p>
   <p class="description-project">
     {description}
@@ -25,14 +27,16 @@ const { technologies, title, img, description, link } = Astro.props;
   <p class="title-technologies">tecnologías usadas</p>
   <div class="container-technologies">
     {
-      technologies.map(({ icon }) => {
+      technologies?.map(({ icon }) => {
+        if(!icon) return;
         const IconComponent = getIconComponent(icon);
-        return <i>{IconComponent && <IconComponent />}</i>;
+        const nameCapitalized = icon.charAt(0).toUpperCase() + icon.slice(1);
+        return <i title={nameCapitalized}>{IconComponent && <IconComponent />}</i>;
       })
     }
   </div>
   <div class="container-link-project">
-    <a href={link} target="_blank">Ver más</a>
+    <a href={`/project/${id}`}>Ver más</a>
   </div>
 </li>
 
@@ -90,8 +94,8 @@ const { technologies, title, img, description, link } = Astro.props;
     display: block;
     height: 200px;
     width: 100%;
-    object-fit: cover;
-    object-position: left top;
+    object-fit: contain;
+    /*object-position: left top;*/
     user-select: none;
     pointer-events: none;
   }

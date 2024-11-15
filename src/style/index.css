@@ -29,3 +29,19 @@ main {
   position: relative;
   background-color: #000;
 }
+
+.p-profession {
+  font-size: 30px;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-block;
+  /*text-transform: capitalize;*/
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+  color: white;
+}
+
+.bouncing {
+  transition: 0.8s all;
+  color: #01be96;
+  animation: rubberband 400ms alternate ease-out;
+}

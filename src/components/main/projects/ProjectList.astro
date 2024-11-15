@@ -1,18 +1,26 @@
 ---
-import { projects } from "../../../const/const";
-import Project from "./Project.astro";
+
+import { projects } from "@/constants/const";
+import ProjectItem from "./ProjectItem.astro";
 ---
 
 <section class="section-projects">
   <div class="linear-grandient-1"></div>
   <div class="container-projects">
-    <h2 class="title-projects" id="proyectos">Proyectos</h2>
+    <h2 class="title-projects" id="proyectos">
+      {
+        Array.from("Proyectos").map((letter, index) => (
+          <span class="p-profession">{letter}</span>
+        ))
+      }
+    </h2>
     <div>
       <ul class="ul-projects">
         {
-          projects.map(({ description, img, link, technologies, title }) => (
-            <Project
-              img={img}
+          projects.map(({ description, imgs, link, technologies, title, id }) => (
+            <ProjectItem
+              id={id}
+              imgs={imgs}
               description={description}
               link={link}
               title={title}

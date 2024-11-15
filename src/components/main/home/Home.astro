@@ -1,73 +1,73 @@
 ---
 import { Image } from "astro:assets";
-import photoperfil from "../../../../public/img/photo-perfil.webp";
+import photoperfil from "@public/img/profile.png";
+import Experience from "@/components/main/experience/Experience.astro";
+
 ---
 
 <div class="content-presentation">
   <div class="linear-gradient-2"></div>
   <div class="linear-gradient-1"></div>
-  <dir class="container-persentation">
+  <div class="container-persentation">
     <div class="container-text">
       <!-- <h2 class="text-hello">Hola <strong>soy</strong></h2> -->
-      <h2 class="text-name">Osnaider Martinez</h2>
-      <div class="container-profession">
-        <div>
-          <span class="p-profession">D</span>
-          <span class="p-profession">e</span>
-          <span class="p-profession">s</span>
-          <span class="p-profession">a</span>
-          <span class="p-profession">r</span>
-          <span class="p-profession">r</span>
-          <span class="p-profession">o</span>
-          <span class="p-profession">l</span>
-          <span class="p-profession">l</span>
-          <span class="p-profession">a</span>
-          <span class="p-profession">d</span>
-          <span class="p-profession">o</span>
-          <span class="p-profession">r</span>
-          <span class="">&nbsp;</span>
+        <div class="container-photo-name">
+          <div class="container-name-profession">
+            <h2 class="text-name">Miguel Angel Lupani</h2>
+            <div class="container-profession">
+              {
+                Array.from("Desarrollador").map((letter, index) => (
+                  <span class="p-profession">{letter}</span>
+                ))
+              }
+              <span class="">&nbsp;</span>
+              <div class="">
+                {
+                  Array.from("Fullstack").map((letter, index) => (
+                    <span class="p-profession">{letter}</span>
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+          <div class="container-photo-profile">
+            <div class="photo-perfil">
+              <picture>
+                <Image src={photoperfil} alt="Miguel Angel Lupani" id="inicio" />
+              </picture>
+            </div>
+          </div>
         </div>
-        <div class="">
-          <span class="p-profession">F</span>
-          <span class="p-profession">r</span>
-          <span class="p-profession">o</span>
-          <span class="p-profession">n</span>
-          <span class="p-profession">t</span>
-          <span class="p-profession">-</span>
-          <span class="p-profession">e</span>
-          <span class="p-profession">n</span>
-          <span class="p-profession">d</span>
-          <span class="">&nbsp;</span>
-          <span class="p-profession">J</span>
-          <span class="p-profession">r</span>
-        </div>
-      </div>
       <p class="p-presentation">
-        Con más de 1 año de experiencia en la creación de experiencias web
-        atractivas y funcionales. Experto en tecnologías front-end, incluyendo
-        HTML5, CSS3, JavaScript y frameworks como React, Next.js, Astro. Capaz
-        de traducir diseños creativos en código interactivo y optimizar la
-        velocidad y el rendimiento del sitio web.
+        Desarrollador web con mas de 10 años de experiencia, autodidacta, proactivo y con
+        capacidad para desarrollar páginas web elegantes y
+        diseños de aplicaciones para clientes exigentes.
+        Organizado y con capacidad de multitarea con
+        experiencia en programación de proyectos,
+        programacion de APIs y verificación del código.
+        Habilidades de desarrollo web y aplicaciones móviles
+        para una posición estimulante en una compañía
+        moderna, abierta y profesional.
       </p>
       <div class="container-curriculum">
-        <a href="https://wa.me/+573166026155" target="_blank" class="a-action"
+        <a href="https://wa.me/+5491163717386" target="_blank" class="a-action"
           >Hablemos</a
         >
         <a
-          href="https://drive.google.com/file/d/1VKgzg5L6JUiRx5d3_kOIjIeQRmthdhM2/view?usp=sharing"
+          href="https://drive.google.com/file/d/187KEv8akptm_JpjFFdwMdsz4kMN9GKC2/view?usp=sharing"
           class="a-curriculum"
           target="_blank">Ver Currículum</a
         >
       </div>
       <div class="container-social">
         <p class="">Echa un vistaso a mi</p>
-        <a href="https://github.com/Osnaider19" target="_blank">
+        <a href="https://github.com/mlupani" target="_blank">
           <li class="li-social">
             <i class="fa-brands fa-github"></i>
           </li>
         </a>
         <a
-          href="https://www.linkedin.com/in/osnaider-mart%C3%ADnez-154b67256/"
+          href="https://www.linkedin.com/in/miguel-angel-lupani-5847b720a/"
           target="_blank"
         >
           <li class="li-social">
@@ -76,34 +76,18 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
         </a>
       </div>
     </div>
-    <div class="container-photo-profile">
-      <div class="photo-perfil">
-        <picture>
-          {/* If you are not using vercel, place a normal <img> tag */}
-          <Image src={photoperfil} alt="Osnaider Martinez" id="inicio" />
-        </picture>
-      </div>
-    </div>
-  </dir>
+  <Experience />
+  </div>
 </div>
 
-<script>
-  const letters = document.querySelectorAll(".p-profesion");
-  letters.forEach((letter) => {
-    letter.addEventListener("mouseenter", () => {
-      toogle(letter);
-    });
-  });
-
-  function toogle(letter) {
-    letter.classList.add("bouncing");
-    letter.addEventListener("animationend", () => {
-      letter.classList.remove("bouncing");
-    });
-  }
-</script>
-
 <style>
+  .container-photo-name{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 50px;
+    flex-direction: row;
+  }
   .content-presentation {
     position: relative;
     width: 100%;
@@ -146,6 +130,7 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
     width: 90%;
     margin: 0 auto;
     max-width: 1355px;
+    justify-content: space-between;
   }
   .container-text {
     position: relative;
@@ -168,20 +153,6 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
   .container-profession {
     cursor: pointer;
     padding: 5px 0;
-  }
-  .p-profession {
-    font-size: 30px;
-    font-weight: 800;
-    cursor: pointer;
-    display: inline-block;
-    text-transform: capitalize;
-    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
-  }
-
-  .bouncing {
-    transition: 0.8s all;
-    color: #01be96;
-    animation: rubberband 400ms alternate ease-out;
   }
 
   @keyframes rubberband {
@@ -208,7 +179,7 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
   .p-presentation {
     padding: 12px 0;
     font-size: 19px;
-    width: 90%;
+    width: 100%;
     text-align: left;
   }
 
@@ -289,7 +260,6 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
 
   .container-photo-profile {
     position: relative;
-    width: 50%;
     display: flex;
     justify-content: center;
   }
@@ -299,10 +269,9 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
     display: flex;
     justify-content: center;
     overflow: hidden;
-    height: 300px;
-    width: 300px;
+    height: 150px;
+    width: 150px;
     margin-top: 30px;
-    margin-left: 110px;
     border-radius: 50%;
     z-index: 10;
     background: rgba(255, 255, 255, 0.2);
@@ -327,13 +296,19 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
   }
   @media (max-width: 900px) {
     .container-persentation {
-      flex-direction: column-reverse;
+      flex-direction: column;
       height: auto;
       gap: 30px;
       padding-top: 100px;
     }
+    .container-photo-name{
+      gap: 0px;
+    }
+    .photo-perfil{
+      height: 120px;
+      width: 120px;
+    }
     .container-photo-profile {
-      width: 100%;
       justify-content: center;
       justify-items: center;
       margin: 0;

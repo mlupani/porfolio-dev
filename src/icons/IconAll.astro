@@ -20,12 +20,20 @@ import IconShadcn from "./IconShadcn.astro";
 import IconMongodb from "./IconMongodb.astro";
 import IconNodeJs from "./IconNodeJs.astro";
 import IconVite from "./IconVite.astro";
+import IconBootstrap from "./IconBootstrap.astro";
+import IconFirebase from "./IconFirebase.astro";
+import IconMysql from "./IconMysql.astro";
+import IconPrisma from "./IconPrisma.astro";
+import IconNestjs from "./IconNest.astro";
+import IconDocker from "./IconDocker.astro";
+import IconLaravel from "./IconLaravel.astro";
 
 export const ICONS = {
   html: IconHtml,
   css: IconCss,
   javaScript: IconJavaScript,
   react: IconReact,
+  reactNative: IconReact,
   astro: IconAstro,
   materialUi: IconMaterialUi,
   nextjs: IconNextjs,
@@ -43,12 +51,16 @@ export const ICONS = {
   mongodb: IconMongodb,
   nodejs: IconNodeJs,
   vite: IconVite,
-  // add new icons here <--
-  // Make sure that when calling the icon the key is the same
-  // "optional" in the IconKeys const file adds the icon key for when you call IconKeys.nameIcon
+  bootstrap: IconBootstrap,
+  firebase: IconFirebase,
+  mysql: IconMysql,
+  prisma: IconPrisma,
+  laravel: IconLaravel,
+  docker: IconDocker,
+  nestjs: IconNestjs
 };
 
 export function getIconComponent(iconName: string) {
-  return ICONS[iconName] || null;
+  return (ICONS as any)[iconName] || null;
 }
 ---

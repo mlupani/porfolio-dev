@@ -1,0 +1,184 @@
+---
+import { projects } from "@/constants/const";
+import { getIconComponent } from "@/icons/IconAll.astro";
+import MainLayout from "@/layouts/MainLayout.astro";
+
+export const getStaticPaths = async () => {
+  return projects.map((project) => ({
+    params: {
+        id: project.id,
+    },
+    props: {
+        project
+    }
+  }))
+}
+
+const { project } = Astro.props;
+
+---
+
+<MainLayout title=`${project.title} - Portfolio - Miguel Angel Lupani`>
+  <section id="portfolio-details" class="portfolio-details">
+    <div class="container">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          {
+            project?.imgs.map((img, i) => (
+              <div class="swiper-slide">
+                {
+                  i === 0 ?
+                    <img transition:name={`project-${project.title}`} loading="lazy" src={`/img/${img}`} alt={project?.title} /> :
+                    <img src={`/img/${img}`} loading="lazy" alt={project?.title} />
+                }
+              </div>
+            ))
+          }
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+
+      {
+        project ?
+          <div class="details">
+            <h3>{project.title}</h3>
+            <div class="portfolio-description">
+              <ul>
+                <li><a href={project?.link}><a target="_blank"><strong><u>Web</u></strong></a></a></li>
+                <li><a href={project?.link_github}><a target="_blank"><strong><u>Repositorio</u></strong></a></a></li>
+                {
+                  project.link_backend ?
+                    <li><a href={project?.link_backend}><a target="_blank"><strong><u>Backend</u></strong></a></a></li> : ''
+                }
+              </ul>
+              <p>
+                {
+                  project.description
+                }
+              </p>
+              <div>
+                <h6>Implementaciones</h6>
+                <ul style={{fontSize:'12px'}}>
+                  {
+                    project.implementations.map((imp,i) => <li>{imp}</li>)
+                  }
+                </ul>
+
+                <h6>Funcionalidades</h6>
+                <ul style={{fontSize:'12px'}}>
+                  {
+                    project.functions.map((func,i) => <li>{func}</li>)
+                  }
+                </ul>
+
+                <h6>Tecnologias</h6>
+                <div class="tecnologies">
+                  {
+                    project.technologies.map(({icon}) => {
+                      const IconComponent = getIconComponent(icon);
+                      const nameCapitalized = icon.charAt(0).toUpperCase() + icon.slice(1);
+                      return (
+                        <span title={nameCapitalized}>{IconComponent && <IconComponent />}</span>
+                      );
+                    })
+                  }
+                </div>
+              </div>
+            </div>
+          </div> : ''
+      }
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 40px;
+    color: white;
+    gap: 50px;
+  }
+  .swiper {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .swiper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    margin: 0 auto
+  }
+  .details {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  .tecnologies {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 50;
+    margin-top: 10px
+  }
+
+  @media (max-width: 900px) {
+    .container {
+      flex-direction: column;
+      padding: 0;
+    }
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper img {
+      width: 100%;
+      height: 75vh;
+      object-fit: contain;
+      max-width: unset;
+      min-width: auto;
+    }
+    .details {
+      width: 100%;
+      padding: 0 40px;
+      margin-top: 0px;
+    }
+  }
+</style>
+
+<script>
+
+  import Swiper from 'swiper';
+  import { Pagination, Navigation } from 'swiper/modules';
+  // import Swiper and modules styles
+  import 'swiper/css';
+  import 'swiper/css/navigation';
+  import 'swiper/css/pagination';
+
+  document.addEventListener('astro:page-load', () => {
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      modules: [Pagination, Navigation],
+    });
+  });
+  
+</script>
+

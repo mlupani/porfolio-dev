@@ -113,7 +113,7 @@ const { project } = Astro.props;
   </section>
 </MainLayout>
 
-<script src="https://kit.fontawesome.com/2898a0ac51.js" crossorigin="anonymous"></script>
+
 
 
 <style>
@@ -230,6 +230,11 @@ const { project } = Astro.props;
   import 'swiper/css/pagination';
 
   document.addEventListener('astro:page-load', () => {
+    // load font awesome script
+    var script = document.createElement('script');
+    script.type = "text/javascript";
+    script.src = "https://kit.fontawesome.com/2898a0ac51.js";
+    document.getElementsByTagName('head')[0].appendChild(script);
     const swiper = new Swiper('.swiper', {
       loop: true,
       pagination: {

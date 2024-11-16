@@ -206,9 +206,9 @@ export const projects = [
     id: 2,
     imgs: ["ecommerce-1.png", "ecommerce-2.png", "ecommerce-3.png", "ecommerce-4.png", "ecommerce-5.png"],
     title: "Cliente de Ecommerce con productos, categorias y carrito de compras",
-    link: "https://ecommerce-production-0d84.up.railway.app",
+    link: "https://ecommerce-client-nine.vercel.app/",
     link_github: "https://github.com/mlupani/ecommerce/tree/main/client",
-    link_api: "https://github.com/mlupani/ecommerce/tree/main/server",
+    link_api: "https://ecommerce-server-gray.vercel.app/api/productos",
     description: "Implementación de un Ecommerce donde pueden manejarse compras de productos, busquedas y manejar el carrito de compras. Realizado con React, Manejo de estados con React-Redux, backend en NodeJS y base de datos de MongoDB",
     implementations: [
         "Backend en NodeJS y Express",
@@ -254,7 +254,7 @@ export const projects = [
     title: "E-Commerce Admin Mobile",
     link: "https://play.google.com/store/apps/details?id=com.mlupani.ecommerceadmin&hl=es-419&ah=H5liuWoUQ8MwH6XwDbFPiz3JfUI",
     link_github: "https://github.com/mlupani/Ecomerce-admin-RN",
-    link_backend: "https://github.com/mlupani/ecommerce/tree/main/server",
+    link_backend: "https://ecommerce-server-gray.vercel.app/api/",
     description: "Implementación de un administrador de Ecommerce donde pueden manejarse productos y categorias, con sus imagenes, precio, stock y descripcion, estos cambios se reflejan en el cliente. Backend en NodeJS y base de datos de MongoDB",
     implementations: [
         "App para Android OS",

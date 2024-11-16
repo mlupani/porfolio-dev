@@ -208,7 +208,7 @@ export const projects = [
     title: "Cliente de Ecommerce con productos, categorias y carrito de compras",
     link: "https://ecommerce-client-nine.vercel.app/",
     link_github: "https://github.com/mlupani/ecommerce/tree/main/client",
-    link_api: "https://ecommerce-server-gray.vercel.app/api/productos",
+    link_backend: "https://ecommerce-server-gray.vercel.app/api/productos",
     description: "Implementación de un Ecommerce donde pueden manejarse compras de productos, busquedas y manejar el carrito de compras. Realizado con React, Manejo de estados con React-Redux, backend en NodeJS y base de datos de MongoDB",
     implementations: [
         "Backend en NodeJS y Express",

@@ -27,8 +27,8 @@ const { technologies, title, imgs, description, link, id } = Astro.props;
   <p class="title-technologies">tecnologías usadas</p>
   <div class="container-technologies">
     {
-      technologies?.map(({ icon }) => {
-        if(!icon) return;
+      technologies?.map(({ icon }, i) => {
+        if(!icon || i > 5) return;
         const IconComponent = getIconComponent(icon);
         const nameCapitalized = icon.charAt(0).toUpperCase() + icon.slice(1);
         return <i title={nameCapitalized}>{IconComponent && <IconComponent />}</i>;

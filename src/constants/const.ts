@@ -192,6 +192,9 @@ export const projects = [
         icon: IconKeys.tailwind,
       },
       {
+        icon: IconKeys.zustand,
+      },
+      {
         icon: IconKeys.prisma,
       },
       {

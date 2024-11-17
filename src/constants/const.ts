@@ -157,6 +157,50 @@ export const skills = [
 export const projects = [
   {
     id: 1,
+    imgs: ['teslo-shop-1.jpg', 'teslo-shop-2.jpg', 'teslo-shop-3.jpg', 'teslo-shop-4.jpg', 'teslo-shop-5.jpg', 'teslo-shop-6.jpg', 'teslo-shop-7.jpg'],
+    title: "Teslo-Shop | Ecommerce",
+    link: "https://teslo-shop-mlupani.vercel.app/",
+    link_github: "https://github.com/mlupani/teslo-shop-curso-nextjs13",
+    description: "Clon de Tesla Shop con funcionalidades de Ecommerce, donde se pueden ver los productos, agregar al carrito, ver detalles de los productos y realizar pagos, y administracion de productos",
+    implementations: [
+        "Creacion de Usuarios",
+        "Pasarelas de pago de Paypal y Mercado pago",
+        "Subir imagenes en la nube con Cloudinary",
+        "Diseño Responsive",
+        "Diseño como la web de Tesla",
+    ],
+    functions: [
+        "Agregar y quitar productos del carrito",
+        "Creacion de ordenes de compra",
+        "Pagos de prueba con Paypal y Mercado Pago",
+        "Funcionalidad de carrito sin estar autenticado",
+        "Alta y baja de productos",
+        "Control de stock",
+        "Control de usuarios"
+    ],
+    technologies: [
+      {
+        icon: IconKeys.typeScript,
+      },
+      {
+        icon: IconKeys.react,
+      },
+      {
+        icon: IconKeys.nextjs,
+      },
+      {
+        icon: IconKeys.tailwind,
+      },
+      {
+        icon: IconKeys.prisma,
+      },
+      {
+        icon: IconKeys.docker,
+      },
+    ],
+  },
+  {
+    id: 2,
     imgs: ['Minstagram-1.png', 'Minstagram-2.png', 'Minstagram-3.png', 'Minstagram-4.png', 'Minstagram-5.png', 'Minstagram-6.png', 'Minstagram-7.png', 'Minstagram-8.png', 'Minstagram-9.png', 'Minstagram-10.png'],
     title: "Minstagram PWA",
     link: "https://minstagram.vercel.app",
@@ -203,7 +247,7 @@ export const projects = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     imgs: ["ecommerce-1.png", "ecommerce-2.png", "ecommerce-3.png", "ecommerce-4.png", "ecommerce-5.png"],
     title: "Cliente de Ecommerce con productos, categorias y carrito de compras",
     link: "https://ecommerce-client-nine.vercel.app/",
@@ -249,7 +293,7 @@ export const projects = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     imgs: ["ecommerce-admin-1.jpeg", "ecommerce-admin-2.jpeg", "ecommerce-admin-3.jpeg", "ecommerce-admin-4.jpeg"],
     title: "E-Commerce Admin Mobile",
     link: "https://play.google.com/store/apps/details?id=com.mlupani.ecommerceadmin&hl=es-419&ah=H5liuWoUQ8MwH6XwDbFPiz3JfUI",

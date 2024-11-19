@@ -141,4 +141,10 @@ const { technologies, title, imgs, description, link, id } = Astro.props;
     flex-wrap: wrap;
     color: white;
   }
+
+  @media (max-width: 900px) {
+    .container-technologies {
+      column-gap: 6px;
+    }
+  }
 </style>

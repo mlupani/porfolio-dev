@@ -40,27 +40,31 @@ const currentPath = Astro.url.pathname;
   <div class="menu-drop"></div>
 
   <script>
-    const $menu = document.querySelector(".nav") as HTMLDivElement;
-    const $menuDrop = document.querySelector(".menu-drop") as HTMLDivElement;
-    const $btnmenu = document.querySelector(".btn-menu") as HTMLDivElement;
-    const $linea1 = document.querySelector("#linea1") as HTMLDivElement;
-    const $linea2 = document.querySelector("#linea2") as HTMLDivElement;
-    const $linea3 = document.querySelector("#linea3") as HTMLDivElement;
-    $btnmenu.addEventListener("click", () => {
-      $linea1.classList.toggle("activelinea1__bars-menu");
-      $linea2.classList.toggle("activelinea2__bars-menu");
-      $linea3.classList.toggle("activelinea3__bars-menu");
-      $menu.classList.toggle("menu-activado");
-      $menuDrop.classList.toggle("activa-menu-drop");
-    });
 
-    $menuDrop.addEventListener("click", () => {
-      $linea1.classList.toggle("activelinea1__bars-menu");
-      $linea2.classList.toggle("activelinea2__bars-menu");
-      $linea3.classList.toggle("activelinea3__bars-menu");
-      $menu.classList.toggle("menu-activado");
-      $menuDrop.classList.toggle("activa-menu-drop");
-    });
+    document.addEventListener("astro:page-load", () => {
+      const $menu = document.querySelector(".nav") as HTMLDivElement;
+      const $menuDrop = document.querySelector(".menu-drop") as HTMLDivElement;
+      const $btnmenu = document.querySelector(".btn-menu") as HTMLDivElement;
+      const $linea1 = document.querySelector("#linea1") as HTMLDivElement;
+      const $linea2 = document.querySelector("#linea2") as HTMLDivElement;
+      const $linea3 = document.querySelector("#linea3") as HTMLDivElement;
+      $btnmenu.addEventListener("click", () => {
+        $linea1.classList.toggle("activelinea1__bars-menu");
+        $linea2.classList.toggle("activelinea2__bars-menu");
+        $linea3.classList.toggle("activelinea3__bars-menu");
+        $menu.classList.toggle("menu-activado");
+        $menuDrop.classList.toggle("activa-menu-drop");
+      });
+  
+      $menuDrop.addEventListener("click", () => {
+        $linea1.classList.toggle("activelinea1__bars-menu");
+        $linea2.classList.toggle("activelinea2__bars-menu");
+        $linea3.classList.toggle("activelinea3__bars-menu");
+        $menu.classList.toggle("menu-activado");
+        $menuDrop.classList.toggle("activa-menu-drop");
+      });
+    })
+
   </script>
 </header>
 

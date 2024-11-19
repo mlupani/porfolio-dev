@@ -161,6 +161,7 @@ export const projects = [
     title: "Teslo-Shop | Ecommerce",
     link: "https://teslo-shop-mlupani.vercel.app/",
     link_github: "https://github.com/mlupani/teslo-shop-curso-nextjs13",
+    apk_android: "",
     description: "Clon de Tesla Shop con funcionalidades de Ecommerce, donde se pueden ver los productos, agregar al carrito, ver detalles de los productos y realizar pagos, y administracion de productos",
     implementations: [
         "Creacion de Usuarios",
@@ -208,6 +209,7 @@ export const projects = [
     title: "Minstagram PWA",
     link: "https://minstagram.vercel.app",
     link_github: "https://github.com/mlupani/Minstagram",
+    apk_android: "",
     description: "Pequeña implementacion de un clon de Instagram, el cual tiene muchas funcionalidades del original. El estilo esta hecho con Flexbox y Bootstrap",
     implementations: [
         "Logins con Firebase",
@@ -256,6 +258,7 @@ export const projects = [
     link: "https://ecommerce-client-nine.vercel.app/",
     link_github: "https://github.com/mlupani/ecommerce/tree/main/client",
     link_backend: "https://ecommerce-server-gray.vercel.app/api/productos",
+    apk_android: "",
     description: "Implementación de un Ecommerce donde pueden manejarse compras de productos, busquedas y manejar el carrito de compras. Realizado con React, Manejo de estados con React-Redux, backend en NodeJS y base de datos de MongoDB",
     implementations: [
         "Backend en NodeJS y Express",
@@ -299,9 +302,10 @@ export const projects = [
     id: 4,
     imgs: ["ecommerce-admin-1.jpeg", "ecommerce-admin-2.jpeg", "ecommerce-admin-3.jpeg", "ecommerce-admin-4.jpeg"],
     title: "E-Commerce Admin Mobile",
-    link: "https://play.google.com/store/apps/details?id=com.mlupani.ecommerceadmin&hl=es-419&ah=H5liuWoUQ8MwH6XwDbFPiz3JfUI",
+    link: "",
     link_github: "https://github.com/mlupani/Ecomerce-admin-RN",
     link_backend: "https://ecommerce-server-gray.vercel.app/api/",
+    apk_android: "https://drive.google.com/file/d/18WeFL2t1WpBGBI3GkYofMa9wdmwhP-bt/view?usp=sharing",
     description: "Implementación de un administrador de Ecommerce donde pueden manejarse productos y categorias, con sus imagenes, precio, stock y descripcion, estos cambios se reflejan en el cliente. Backend en NodeJS y base de datos de MongoDB",
     implementations: [
         "App para Android OS",

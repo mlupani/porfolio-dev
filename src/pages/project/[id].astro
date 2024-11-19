@@ -53,11 +53,22 @@ const { project } = Astro.props;
             </h2>
             <div class="portfolio-description">
               <div class="buttons-container">
-                <div class="container-link-project">
-                  <a href={project?.link} target="_blank">Web
-                    <i class="fa-solid fa-globe"></i>
-                  </a>
-                </div>
+                {
+                  project.link ?
+                  <div class="container-link-project">
+                    <a href={project?.link} target="_blank">Web
+                      <i class="fa-solid fa-globe"></i>
+                    </a>
+                  </div> : null
+                }
+                {
+                  project.apk_android ?
+                  <div class="container-link-project">
+                    <a href={project?.apk_android} target="_blank">Apk
+                      <i class="fa fa-android"></i>
+                    </a>
+                  </div> : null
+                }
                 <div class="container-link-project">
                   <a href={project?.link_github} target="_blank">Repositorio
                     <i class="fa-brands fa-github"></i>
@@ -67,7 +78,7 @@ const { project } = Astro.props;
                   project.link_backend &&
                     <div class="container-link-project">
                       <a href={project?.link_backend} target="_blank">Backend
-                        <i class="fa-brands fa-github"></i>
+                        <i class="fa-solid fa-globe"></i>
                       </a>
                     </div>
                 }

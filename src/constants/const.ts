@@ -17,7 +17,7 @@ export const exp = [
   {
     title: "Desarrollador Fullstack SSr.",
     corporation: "Mas Pedidos",
-    date: "06/2023 – Actualidad",
+    date: "06/2024 – Actualidad",
   },
 ];
 

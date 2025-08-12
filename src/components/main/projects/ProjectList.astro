@@ -9,9 +9,12 @@ import ProjectItem from "./ProjectItem.astro";
   <div class="container-projects">
     <h2 class="title-projects" id="proyectos">
       {
-        Array.from("Proyectos").map((letter, index) => (
-          <span class="p-profession">{letter}</span>
-        ))
+        Array.from("Proyectos y Contribuciones").map((letter, index) => {
+          if (letter === " ") {
+            return " "
+          }
+          return <span class="p-profession">{letter}</span>
+        })
       }
     </h2>
     <div>

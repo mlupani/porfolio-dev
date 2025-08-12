@@ -51,6 +51,14 @@ export const IconKeys = {
   docker: "docker",
   laravel: "laravel",
   nestjs: "nestjs",
+  openai: "openai",
+  copilot: "copilot",
+  ollama: "ollama",
+  n8n: "n8n",
+  supabase: "supabase",
+  kubernetes: "kubernetes",
+  terraform: "terraform",
+  aws: "aws",
   // here add more icon keys
 };
 
@@ -108,6 +116,10 @@ export const skills = [
     icon: IconKeys.docker,
   },
   {
+    title: "Kubernetes",
+    icon: IconKeys.kubernetes,
+  },
+  {
     title: "Git",
     icon: IconKeys.git,
   },
@@ -152,9 +164,164 @@ export const skills = [
     title: "Firebase",
     icon: IconKeys.firebase,
   },
+  {
+    title: "OpenAI",
+    icon: IconKeys.openai,
+  },
+  {
+    title: "Copilot",
+    icon: IconKeys.copilot,
+  },
+  {
+    title: "Ollama",
+    icon: IconKeys.ollama,
+  },
+  {
+    title: "N8n",
+    icon: IconKeys.n8n,
+  },
+  {
+    title: "Supabase",
+    icon: IconKeys.supabase,
+  },
+  {
+    title: "Terraform",
+    icon: IconKeys.terraform,
+  },
+  {
+    title: "AWS",
+    icon: IconKeys.aws,
+  },
 ];
 
 export const projects = [
+  {
+    id: 7,
+    imgs: ['suite-eventos-1.png', 'suite-eventos-2.png', 'suite-eventos-3.png', 'suite-eventos-4.png', 'suite-eventos-5.png', 'suite-eventos-6.png'],
+    title: "Suite Eventos",
+    link: "https://suite-eventos-landing.vercel.app/",
+    link_github: "https://github.com/mlupani/suite-eventos-landing",
+    apk_android: "",
+    description: "Landing page para Suite Eventos, donde se puede tener acceso a la demo de los dos sistemas de Suite Eventos, un cliente y un administrador",
+    implementations: [
+        "Diseño Responsive",
+        "Landing page con acceso a la demo de los dos sistemas",
+        "Sistema de cliente para ver los eventos y reservarlos",
+        "Sistema de administrador para gestionar los eventos y usuarios",
+    ],
+    functions: [
+        "Landing page con acceso a la demo de los dos sistemas",
+        "Sistema de cliente poder reservar",
+        "Chat con IA para responder preguntas",
+        "Chat con IA para generar eventos",
+        "Generacion de reuniones automaticas con IA"
+    ],
+    technologies: [
+      {
+        icon: IconKeys.typeScript,
+      },
+      {
+        icon: IconKeys.react,
+      },
+      {
+        icon: IconKeys.nextjs,
+      },
+      {
+        icon: IconKeys.tailwind,
+      },
+      {
+        icon: IconKeys.openai
+      }
+    ],
+  },
+  {
+    id: 8,
+    imgs: ['hotel-assistant-1.png', 'hotel-assistant-2.png', 'hotel-assistant-3.png', 'hotel-assistant-4.png'],
+    title: "Hotel Assistant",
+    link: "https://hotels-assistant.vercel.app/login",
+    link_github: "https://github.com/mlupani/hotel-assistant",
+    apk_android: "",
+    description: "Hotel Assistant es una herramienta de administracion para hoteles, donde se gestionan las consultas de los clientes, activando un asistente virtual para responder las consultas",
+    implementations: [
+        "Diseño Responsive",
+        "Agente conversacional con OpenAI", 
+        "Flujo de trabajo con N8n",
+        "Base de datos en Supabase",
+    ],
+    functions: [
+        "Activar y desactivar el asistente virtual",
+        "Gestionar las consultas de los clientes",
+        "Dashboard para ver las estadisticas de las consultas",
+        "Gestion de reportes de las consultas",
+        "Intervencion humana en caso de que el asistente no pueda responder",
+        "Constante actualizacion de la base de datos con N8n",
+    ],
+    technologies: [
+      {
+        icon: IconKeys.typeScript,
+      },
+      {
+        icon: IconKeys.nextjs,
+      },
+      {
+        icon: IconKeys.tailwind,
+      },
+      {
+        icon: IconKeys.supabase,
+      },
+      {
+        icon: IconKeys.openai
+      },
+      {
+        icon: IconKeys.n8n,
+      }
+    ],
+  },
+  {
+    id: 6,
+    imgs: ['lubricentro-1.png', 'lubricentro-2.png', 'lubricentro-3.png', 'lubricentro-4.png', 'lubricentro-5.png', 'lubricentro-6.png'],
+    title: "Lubricentro | Panel de control",
+    link: "https://lubricentro-panel.vercel.app/",
+    link_github: "https://github.com/mlupani/lubricentro-panel",
+    apk_android: "",
+    description: "Panel de control para Lubricentros, donde se pueden gestionar los clientes, productos, ventas, inventario.Agregar recordatorios para los clientes",
+    implementations: [
+        "Mensajes por whatsapp",
+        "Informacion persistente en la base de datos",
+        "Diseño Responsive",
+        "Diseño como la web de Lubricentro",
+    ],
+    functions: [
+        "Agregar y quitar clientes",
+        "Agregar y quitar vehiculos",
+        "Agregar y quitar productos",
+        "Agregar y quitar inventario",
+        "Agregar recordatorios para los clientes",
+        "Agregar y quitar servicios",
+        "Configurar recordatorios para los clientes",
+    ],
+    technologies: [
+      {
+        icon: IconKeys.typeScript,
+      },
+      {
+        icon: IconKeys.react,
+      },
+      {
+        icon: IconKeys.nextjs,
+      },
+      {
+        icon: IconKeys.tailwind,
+      },
+
+      {
+        icon: IconKeys.prisma,
+      },
+      {
+        icon: IconKeys.supabase,
+      }
+    ],
+  },
   {
     id: 1,
     imgs: ['Minstagram-1.png', 'Minstagram-2.png', 'Minstagram-3.png', 'Minstagram-4.png', 'Minstagram-5.png', 'Minstagram-6.png', 'Minstagram-7.png', 'Minstagram-8.png', 'Minstagram-9.png', 'Minstagram-10.png'],

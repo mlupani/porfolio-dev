@@ -12,15 +12,16 @@ export interface Props {
   technologies?: Technology[];
   link: string;
   id: number;
+  type: string;
 }
 
-const { technologies, title, imgs, description, link, id } = Astro.props;
+const { technologies, title, imgs, description, link, id, type } = Astro.props;
 
 ---
 
 <li class="li-project">
   <img transition:name={`project-${title}`} src={`/img/${imgs[0]}`} alt={title} loading="lazy"  />
-  <p class="title-project">{title}</p>
+  <p class="title-project">{title} {type === 'contribution' ? <small style="color: #f6f6f990;font-size: 15px;">({type})</small></p> : null } 
   <p class="description-project">
     {description}
   </p>

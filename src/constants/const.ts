@@ -1,3 +1,8 @@
+interface TypeProject {
+  type: "project" | "contribution";
+}
+
+
 export const exp = [
   {
     title: "Desarrollador de Software",
@@ -199,6 +204,7 @@ export const projects = [
     id: 7,
     imgs: ['suite-eventos-1.png', 'suite-eventos-2.png', 'suite-eventos-3.png', 'suite-eventos-4.png', 'suite-eventos-5.png', 'suite-eventos-6.png'],
     title: "Suite Eventos",
+    type: "project",
     link: "https://suite-eventos-landing.vercel.app/",
     link_github: "https://github.com/mlupani/suite-eventos-landing",
     apk_android: "",
@@ -238,8 +244,9 @@ export const projects = [
     id: 8,
     imgs: ['hotel-assistant-1.png', 'hotel-assistant-2.png', 'hotel-assistant-3.png', 'hotel-assistant-4.png'],
     title: "Hotel Assistant",
+    type: "contribution",
     link: "https://hotels-assistant.vercel.app/login",
-    link_github: "https://github.com/mlupani/hotel-assistant",
+    link_github: "https://github.com/julianbesteiro/hotels-assistant",
     apk_android: "",
     description: "Hotel Assistant es una herramienta de administracion para hoteles, donde se gestionan las consultas de los clientes, activando un asistente virtual para responder las consultas",
     implementations: [
@@ -281,6 +288,7 @@ export const projects = [
     id: 6,
     imgs: ['lubricentro-1.png', 'lubricentro-2.png', 'lubricentro-3.png', 'lubricentro-4.png', 'lubricentro-5.png', 'lubricentro-6.png'],
     title: "Lubricentro | Panel de control",
+    type: "project",
     link: "https://lubricentro-panel.vercel.app/",
     link_github: "https://github.com/mlupani/lubricentro-panel",
     apk_android: "",
@@ -323,9 +331,143 @@ export const projects = [
     ],
   },
   {
+    id: 9,
+    imgs: ['silver-1.png', 'silver-2.png', 'silver-3.png', 'silver-4.png', 'silver-5.png'],
+    title: "Silver5 | P2P - OTC",
+    type: "contribution",
+    link: "https://www.silver5ai.com/",
+    link_github: "https://github.com/FacundoInza/silver-sass-front",
+    apk_android: "",
+    description: "La plataforma de IA más confiable de Latinoamérica y Europa para VASPs y mesas OTC. Más de 50 instituciones financieras confían en nuestra tecnología para automatizar operaciones P2P, garantizar compliance y escalar sus operaciones de forma segura.",
+    implementations: [
+        "Integracion Oficial con Binance",
+        "Verificacion de KYC con Didit",
+        "Flujos de trabajo con N8n",
+        "Trading optimizado con IA",
+        "Gestion de ordenes, chats y clientes"
+    ],
+    functions: [
+      "Gestion de ordenes, chats y clientes",
+      "Creacion de usuarios",
+      "Verificacion de datos KYC con Didit",
+      "Trading optimizado con IA",
+      "Notificaciones de ordenes",
+      "Cambiar estado de ordenes de Binance"
+    ],
+    technologies: [
+      {
+        icon: IconKeys.typeScript,
+      },
+      {
+        icon: IconKeys.nextjs,
+      },
+      {
+        icon: IconKeys.nodejs,
+      },
+
+      {
+        icon: IconKeys.n8n,
+      },
+      {
+        icon: IconKeys.docker,
+      },
+      {
+        icon: IconKeys.aws,
+      }
+    ],
+  },
+  {
+    id: 11,
+    imgs: ['bunker-1.png', 'bunker-2.png', 'bunker-3.png', 'bunker-4.png', 'bunker-5.png'],
+    title: "Bunker Solutions",
+    type: "contribution",
+    link: "https://bunker.solutions/",
+    link_github: "https://github.com/julianbesteiro/bunker-front",
+    apk_android: "",
+    description: "plataforma basada en Silver5 para manejar transacciones, ordenes P2P y bots de posicionamiento",
+    implementations: [
+        "Integracion con Binance",
+        "Flujos de trabajo con N8n",
+        "Diseño Responsive",
+    ],
+    functions: [
+      "Gestion de ordenes, chats y clientes",
+      "Creacion de usuarios",
+      "Trading optimizado con IA",
+      "Notificaciones de ordenes",
+      "Creacion de bots de posicionamiento",
+      "Seleccion de anuncios personalizado"
+    ],
+    technologies: [
+      {
+        icon: IconKeys.typeScript,
+      },
+      {
+        icon: IconKeys.react,
+      },
+      {
+        icon: IconKeys.nextjs,
+      },
+      {
+        icon: IconKeys.nodejs,
+      },
+      {
+        icon: IconKeys.docker,
+      },
+      {
+        icon: IconKeys.aws,
+      }
+    ],
+  },
+  {
+    id: 10,
+    imgs: ['lajugada-1.png', 'lajugada-2.png', 'lajugada-3.png', 'lajugada-4.jpg', 'lajugada-5.jpg'],
+    title: "La Jugada",
+    type: "contribution",
+    link: "https://lajugada.co/",
+    link_github: "https://github.com/julianbesteiro/interfaz-web-videos",
+    apk_android: "",
+    description: "Es un servicio de grabación de partidos de fútbol 5 que te permite capturar los momentos más destacados y los goles más emocionantes de cada encuentro. Disfruta de las mejores jugadas con facilidad y rapidez. Ademas de agendar partidos y poder unirte a otros jugadores para jugar",
+    implementations: [
+        "Grabacion de partidos de fútbol 5",
+        "Reservar partidos y canchas",
+        "Unirse a partidos",
+        "Ver partidos agendados",
+    ],
+    functions: [
+      "Buscar partidos",
+      "Reservar partidos y canchas",
+      "Unirse a partidos",
+      "Cuenta con 'Mis Partidos'",
+      "Pagar con tarjeta de credito",
+      "Backoffice para el club y manejar canchas, jugadores, partidos, etc"
+    ],
+    technologies: [
+      {
+        icon: IconKeys.typeScript,
+      },
+      {
+        icon: IconKeys.react,
+      },
+      {
+        icon: IconKeys.nextjs,
+      },
+      {
+        icon: IconKeys.nodejs,
+      },
+      {
+        icon: IconKeys.docker,
+      },
+      {
+        icon: IconKeys.aws,
+      }
+    ],
+  },
+  {
     id: 1,
     imgs: ['Minstagram-1.png', 'Minstagram-2.png', 'Minstagram-3.png', 'Minstagram-4.png', 'Minstagram-5.png', 'Minstagram-6.png', 'Minstagram-7.png', 'Minstagram-8.png', 'Minstagram-9.png', 'Minstagram-10.png'],
     title: "Minstagram PWA",
+    type: "project",
     link: "https://minstagram.vercel.app",
     link_github: "https://github.com/mlupani/Minstagram",
     apk_android: "",
@@ -374,6 +516,7 @@ export const projects = [
     id: 2,
     imgs: ["ecommerce-1.png", "ecommerce-2.png", "ecommerce-3.png", "ecommerce-4.png", "ecommerce-5.png"],
     title: "Cliente de Ecommerce con productos, categorias y carrito de compras",
+    type: "project",
     link: "https://ecommerce-client-nine.vercel.app/",
     link_github: "https://github.com/mlupani/ecommerce/tree/main/client",
     link_backend: "https://ecommerce-server-gray.vercel.app/api/productos",
@@ -421,6 +564,7 @@ export const projects = [
     id: 3,
     imgs: ["ecommerce-admin-1.jpeg", "ecommerce-admin-2.jpeg", "ecommerce-admin-3.jpeg", "ecommerce-admin-4.jpeg"],
     title: "E-Commerce Admin Mobile",
+    type: "project",
     link: "",
     link_github: "https://github.com/mlupani/Ecomerce-admin-RN",
     link_backend: "https://ecommerce-server-gray.vercel.app/api/",
@@ -459,6 +603,7 @@ export const projects = [
     id: 4,
     imgs: ['url-shortener-1.jpg', 'url-shortener-2.jpg', 'url-shortener-3.jpg'],
     title: "Acortador de URL",
+    type: "project",
     link: "https://mlupani-sh-url.netlify.app/",
     link_github: "https://github.com/mlupani/url-shortener",
     apk_android: "",
@@ -489,6 +634,7 @@ export const projects = [
     id: 5,
     imgs: ['teslo-shop-1.jpg', 'teslo-shop-2.jpg', 'teslo-shop-3.jpg', 'teslo-shop-4.jpg', 'teslo-shop-5.jpg', 'teslo-shop-6.jpg', 'teslo-shop-7.jpg'],
     title: "Teslo-Shop | Ecommerce",
+    type: "project",
     link: "https://teslo-shop-mlupani.vercel.app/",
     link_github: "https://github.com/mlupani/teslo-shop-curso-nextjs13",
     apk_android: "",

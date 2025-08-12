@@ -20,7 +20,7 @@ import ProjectItem from "./ProjectItem.astro";
     <div>
       <ul class="ul-projects">
         {
-          projects.map(({ description, imgs, link, technologies, title, id }) => (
+          projects.map(({ description, imgs, link, technologies, title, id, type }) => (
             <ProjectItem
               id={id}
               imgs={imgs}
@@ -28,6 +28,7 @@ import ProjectItem from "./ProjectItem.astro";
               link={link}
               title={title}
               technologies={technologies}
+              type={type}
             />
           ))
         }

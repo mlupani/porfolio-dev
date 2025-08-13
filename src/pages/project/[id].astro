@@ -67,20 +67,20 @@ const { project } = Astro.props;
             <div class="portfolio-description">
               <div class="buttons-container" >
                 {
-                  project.link ?
+                  project.link &&
                   <div class="container-link-project">
                     <a href={project?.link} target="_blank">Web
                       <i class="fa-solid fa-globe"></i>
                     </a>
-                  </div> : null
+                  </div>
                 }
                 {
-                  project.apk_android ?
+                  project.apk_android &&
                   <div class="container-link-project">
                     <a href={project?.apk_android} target="_blank">Apk
                       <i class="fa fa-android"></i>
                     </a>
-                  </div> : null
+                  </div>
                 }
                 <div class="container-link-project">
                   <a href={project?.link_github} target="_blank">Repositorio

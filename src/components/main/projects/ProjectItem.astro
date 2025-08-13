@@ -19,27 +19,29 @@ const { technologies, title, imgs, description, link, id, type } = Astro.props;
 
 ---
 
-<li class="li-project">
-  <img transition:name={`project-${title}`} src={`/img/${imgs[0]}`} alt={title} loading="lazy"  />
-  <p class="title-project">{title} {type === 'contribution' ? <small style="color: #f6f6f990;font-size: 15px;">({type})</small></p> : null } 
-  <p class="description-project">
-    {description}
-  </p>
-  <p class="title-technologies">tecnologías usadas</p>
-  <div class="container-technologies">
-    {
-      technologies?.map(({ icon }, i) => {
-        if(!icon || i > 5) return;
-        const IconComponent = getIconComponent(icon);
-        const nameCapitalized = icon.charAt(0).toUpperCase() + icon.slice(1);
-        return <i title={nameCapitalized}>{IconComponent && <IconComponent />}</i>;
-      })
-    }
-  </div>
-  <div class="container-link-project">
-    <a href={`/project/${id}`}>Ver más</a>
-  </div>
-</li>
+<a href={`/project/${id}`}>
+  <li class="li-project">
+    <img transition:name={`project-${title}`} src={`/img/${imgs[0]}`} alt={title} loading="lazy"  />
+    <p class="title-project">{title} {type === 'contribution' ? <small style="color: #f6f6f990;font-size: 15px;">({type})</small></p> : null } 
+    <p class="description-project">
+      {description}
+    </p>
+    <p class="title-technologies">tecnologías usadas</p>
+    <div class="container-technologies">
+      {
+        technologies?.map(({ icon }, i) => {
+          if(!icon || i > 5) return;
+          const IconComponent = getIconComponent(icon);
+          const nameCapitalized = icon.charAt(0).toUpperCase() + icon.slice(1);
+          return <i title={nameCapitalized}>{IconComponent && <IconComponent />}</i>;
+        })
+      }
+    </div>
+    <div class="container-link-project">
+      <a href={`/project/${id}`}>Ver más</a>
+    </div>
+  </li>
+</a>
 
 <style>
   .li-project {

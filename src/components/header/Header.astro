@@ -9,22 +9,22 @@ const currentPath = Astro.url.pathname;
   </a>
   <nav class="nav">
     <ul class="ul-nav">
-      <a href="#inicio">
+      <a href={currentPath.includes('project') ? '/#inicio' : '#inicio'}>
         <li class="li-nav">Inicio</li>
       </a>
 
-      <a href="#proyectos">
+      <a href={currentPath.includes('project') ? '/#proyectos' : '#proyectos'}>
         <li class="li-nav">Proyectos</li>
       </a>
 
-      <a href="#skills">
+      <a href={currentPath.includes('project') ? '/#skills' : '#skills'}>
         <li class="li-nav">Habilidades</li>
       </a>
-      <a href="#sobremi">
+      <a href={currentPath.includes('project') ? '/#sobremi' : '#sobremi'}>
         <li class="li-nav">Sobre mi</li>
       </a>
 
-      <a href="#contacto">
+      <a href={currentPath.includes('project') ? '/#contacto' : '#contacto'}>
         <li class="li-nav">Contacto</li>
       </a>
     </ul>
@@ -48,6 +48,18 @@ const currentPath = Astro.url.pathname;
       const $linea1 = document.querySelector("#linea1") as HTMLDivElement;
       const $linea2 = document.querySelector("#linea2") as HTMLDivElement;
       const $linea3 = document.querySelector("#linea3") as HTMLDivElement;
+
+      function closeMenuIfMobile() {
+        // Puedes ajustar el breakpoint según tu CSS (ej: 900px)
+        if (window.innerWidth <= 900) {
+          $linea1.classList.remove("activelinea1__bars-menu");
+          $linea2.classList.remove("activelinea2__bars-menu");
+          $linea3.classList.remove("activelinea3__bars-menu");
+          $menu.classList.remove("menu-activado");
+          $menuDrop.classList.remove("activa-menu-drop");
+        }
+      }
+
       $btnmenu.addEventListener("click", () => {
         $linea1.classList.toggle("activelinea1__bars-menu");
         $linea2.classList.toggle("activelinea2__bars-menu");
@@ -55,7 +67,7 @@ const currentPath = Astro.url.pathname;
         $menu.classList.toggle("menu-activado");
         $menuDrop.classList.toggle("activa-menu-drop");
       });
-  
+
       $menuDrop.addEventListener("click", () => {
         $linea1.classList.toggle("activelinea1__bars-menu");
         $linea2.classList.toggle("activelinea2__bars-menu");
@@ -63,7 +75,15 @@ const currentPath = Astro.url.pathname;
         $menu.classList.toggle("menu-activado");
         $menuDrop.classList.toggle("activa-menu-drop");
       });
-    })
+
+      // Cerrar el menú al hacer click en cualquier enlace de navegación en mobile
+      const navLinks = document.querySelectorAll(".ul-nav a");
+      navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+          closeMenuIfMobile();
+        });
+      });
+    });
 
   </script>
 </header>

@@ -68,3 +68,16 @@ main {
   color: #f6f6f9;
   justify-content: space-between;
 }
+
+/* Cambios para mobile */
+@media (max-width: 600px) {
+  .p-profession {
+    font-size: 24px;
+    font-weight: 800;
+    cursor: pointer;
+    display: inline-block;
+    /*text-transform: capitalize;*/
+    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+    color: white;
+  }
+}
